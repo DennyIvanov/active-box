@@ -31,13 +31,18 @@ $(function() {
     
     /* Smooth scroll */
     $("[data-scroll]").on("click", function(event) {
+        // исключаем стандартную реакцию браузера
         event.preventDefault();
-        
+        // получем идентификатор блока из атрибута data-scroll
         let elementId = $(this).data('scroll');
+        // находим высоту, на которой расположен блок
         let elementOffset = $(elementId).offset().top;
         
         nav.removeClass("show");
         
+        $("#nav a").removeClass("active");
+        $(this).addClass("active");
+
         $("html, body").animate({
             scrollTop: elementOffset - 70
         }, 700);

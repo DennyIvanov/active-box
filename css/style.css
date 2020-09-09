@@ -77,6 +77,9 @@ p {
     border-bottom: 1px solid #515369;
 }
 
+.header__logo {
+    cursor: pointer;
+}
 
 
 /*Navigation
@@ -97,6 +100,9 @@ p {
     transition: opacity 0.1s liner;
 }
 
+.nav__link.active {
+    opacity: 1;
+}
 
 .nav__link:first-child {
     margin: 0;
@@ -538,6 +544,8 @@ p {
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
+
+    margin-bottom: 20px;
 }
 
 
@@ -766,6 +774,10 @@ p {
     .reviews__photo {
         width: 100%;
         margin-bottom: 30px;
+    }
+
+    .slick-dots {
+        width: 100%;
     }
     
     .reviews__content {
